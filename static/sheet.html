@@ -25,7 +25,7 @@ html, body {
 */
 
 .box {
-	border: 0.2mm solid #000;
+	border: 1px solid #000;
 	margin: 0 var(--pad) var(--pad) 0;
 	padding: var(--pad);
 }
@@ -54,15 +54,17 @@ small {
 h3 {
 	font-weight: bold;
 	text-transform: uppercase;
-	opacity: 0.5;
+	opacity: 0.44;
 	font-size: 0.66em;
 	margin-bottom: -0.1em;
 }
+.bonus { opacity: 0.25; }
+
 
 .fatesheet {
 	margin: 20mm auto;
 	width: calc(257mm + var(--pad));
-	height: calc(170mm + var(--pad));
+	/* height: calc(170mm + var(--pad)); */
 	box-shadow: 0 1mm 10mm #eee;
 	border-radius: 1mm;
 
@@ -96,7 +98,6 @@ h3 {
 	;
 }
 
-
 .details {
 	width: 100%;
 	flex: 1;
@@ -111,16 +112,78 @@ h3 {
 }
 .skills {}
 
-.skills > table th {
+.skills th {
 	font-weight: normal;
 	text-align: right;
 	padding-right: var(--pad);
+	white-space: nowrap;
+	vertical-align: top;
 }
-.skills > table th:after {
+.skills th:after {
 	content:':'
 }
+.skills td, .skills th {
+	padding-bottom: calc(0.5 * var(--pad));
+}
 
-.stressconc {}
+.stressconc {
+	display: flex;
+	flex-direction: column;
+	align-content: stretch;
+}
+
+.stress {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-bottom: var(--pad);
+}
+.track {
+	display: flex;
+	flex-direction: column;
+	margin-right: calc(2 * var(--pad));
+}
+.trackmarks {
+	padding-top: calc(0.5 * var(--pad));
+	counter-reset: track;
+	display: flex;
+	flex-direction: row;
+}
+.trackmarks .mark, .consequence .size {
+	font-weight: bold;
+	color: #00000099;
+	display: block;
+	width: 1.5em;
+	height: 1.5em;
+	border: 1px solid #000;
+	text-align: center;
+	line-height: 1.2em;
+	margin-right: calc(0.5 * var(--pad));
+}
+.bonus .trackmarks .mark, .consequence.bonus .size {
+	border-style: dashed;
+}
+
+.trackmarks .mark:before {
+	counter-increment: track;
+	content: counter(track);
+}
+
+.consequences {
+	margin-top: var(--pad);
+	display: flex;
+	flex-direction: column;
+}
+.consequence {
+	display: flex;
+	flex-direction: row;
+	border-top: 1px solid #ccc;
+	padding: calc(1 * var(--pad)) 0;
+	border-width: 1px 0;
+}
+.size {
+	margin-right: calc(0.5 * var(--pad));
+}
 
 .textcol {
 	flex: 3;
@@ -156,13 +219,13 @@ h3 {
 						<td></td>
 					</tr><tr>
 						<th>Great (+4)</th>
-						<td></td>
+						<td>Brilliant</td>
 					</tr><tr>
 						<th>Good (+3)</th>
-						<td></td>
+						<td>Classy</td>
 					</tr><tr>
 						<th>Fair (+2)</th>
-						<td></td>
+						<td>Dangerous, Savvy, Treacherous</td>
 					</tr><tr>
 						<th>Average (+1)</th>
 						<td></td>
@@ -174,7 +237,42 @@ h3 {
 			</div>
 			<div class="stressconc box">
 				<h2>Stress <small>and</small> Consequences</h2>
-				stress
+				<div class="stress">
+					<div class="track">
+						<h3>Physical Stress</h3>
+						<div class="trackmarks">
+							<span class="mark"></span>
+							<span class="mark"></span>
+							<span class="mark"></span>
+							<span class="mark"></span>
+						</div>
+					</div>
+					<div class="track">
+						<h3>Mental Stress</h3>
+						<div class="trackmarks">
+							<span class="mark"></span>
+							<span class="mark"></span>
+						</div>
+					</div>
+				</div>
+				<div class="consequences">
+					<div class="consequence">
+						<span class="size">2</span>
+						<h3>Mild</h3>
+					</div>
+					<div class="consequence">
+						<span class="size">4</span>
+						<h3>Moderate</h3>
+					</div>
+					<div class="consequence">
+						<span class="size">6</span>
+						<h3>Severe</h3>
+					</div>
+					<div class="consequence bonus">
+						<span class="size">2</span>
+						<h3>Mild</h3>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="textcol">
