@@ -1,5 +1,7 @@
 // FateSheet theme
 export default {
-	gap: '4px',
-	headHeight: '30px'
+	gap: '15px',
+	headHeight: '30px',
+	edgeWidth: '1px',
+	edgeColor: '#025',
 }

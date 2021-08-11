@@ -8,22 +8,26 @@ export const BoxHead = styled.div`
 	text-transform: uppercase;
 	letter-spacing: 0.066em;
 	color: #fff;
-	background-color: #000;
+	background-color: ${props => props.theme.edgeColor};
 	padding: 0 ${props => props.theme.gap};
 	height: ${props => props.theme.headHeight};
 	line-height: ${props => props.theme.headHeight};
 
-	margin: calc(-1 * ${props => props.theme.gap});
-	margin-bottom: ${props => props.theme.gap};
-	border-top-left-radius: calc(0.1 * ${props => props.theme.headHeight});
+	margin:
+		calc(-1 * ${props => props.theme.edgeWidth})
+		calc(-1 * ${props => props.theme.edgeWidth})
+		0
+		calc(-1 * ${props => props.theme.gap} + -1 * ${props => props.theme.edgeWidth})
+	;
 
 	&:after {
 		content: '';
-		background-color: #000;
+		background-color: ${props => props.theme.edgeColor};
 		height: ${props => props.theme.headHeight};
-		width: calc(0.5 * ${props => props.theme.headHeight});
+		width: ${props => props.theme.headHeight};
 		border-bottom-right-radius: calc(0.5 * ${props => props.theme.headHeight});
 		position: absolute;
+		right: calc(-0.5 * (${props => props.theme.headHeight} + ${props => props.theme.edgeWidth}));
 		right: calc(-0.5 * ${props => props.theme.headHeight});
 	}
 `

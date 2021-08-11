@@ -5,7 +5,7 @@ import {Col} from '../elements/Col'
 import {BoxHead} from './BoxHead'
 
 export const Box = (props) => {
-	return <Col>
+	return <Col sidePad border margin doubleRightMargin>
 		<BoxHead>{props.heading}</BoxHead>
 		{props.children}
 	</Col>

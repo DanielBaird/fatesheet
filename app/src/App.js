@@ -7,19 +7,17 @@ import './App.css';
 import {Row} from './elements/Row'
 import {Col} from './elements/Col'
 import {Box} from './components/Box'
-import {CharSheet} from './components/CharSheet';
+import {CharSheet} from './components/CharSheet'
+import {FullCharsheet} from './components/FullCharsheet'
 
 import fateSheetTheme from './themes/fs'
+
+import chData from './data/amelia'
 
 function App() {
 	return (<>
 		<ThemeProvider theme={fateSheetTheme}>
-			<CharSheet>
-				<Box heading="asdf">
-					<div>qwer</div>
-					<div>asdf</div>
-				</Box>
-			</CharSheet>
+			<FullCharsheet character={chData} />
 
 		</ThemeProvider>
 		<div class="fatesheet">
