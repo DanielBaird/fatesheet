@@ -1,17 +1,27 @@
 
-import React from 'react'
 import styled, {css} from 'styled-components'
 
 export const Col = styled.div`
 	display: flex;
 	flex-direction: column;
-	justify-content: stretch;
-	flex: 1 0 auto;
+	justify-content: start;
 
 	${ props => {
-		if (props.sidePad === true) { props.sidePad = 1 }
-		return css`padding-left: calc(${props.sidePad} * ${props.theme.gap});`
+		if (props.narrow) {
+			return css`flex: 0 0 auto;`
+		}
+		if (props.width) {
+			return css`flex: ${props.width} 0 0;`
+		}
+		return css`flex: 1 0 auto;`
 	}}
+
+	${ props => props.pad && css`
+		padding: ${props.theme.gap};
+	`}
+	${ props => props.bottomPad && css`
+		padding-bottom: ${props.theme.gap};
+	`}
 	${ props => props.margin && css`
 		margin-right: calc(${props.theme.edgeWidth} + ${props.theme.gap});
 		margin-bottom: calc(${props.theme.edgeWidth} + ${props.theme.gap});

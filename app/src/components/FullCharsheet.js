@@ -1,25 +1,35 @@
 
 import React from 'react'
-import styled, {css} from 'styled-components'
 import {Col} from '../elements/Col'
 import {Row} from '../elements/Row'
+import {Box} from '../elements/Box'
 import {CharSheet} from './CharSheet'
-import {Box} from './Box'
+import {NamedField} from './NamedField'
 
 export const FullCharsheet = ({character}) => {
 
+	const aspects = character.aspectList.map( (a) =>
+		<NamedField key={a.aspect} name={a.aspect}>{a.value}</NamedField>
+	)
+
 	return <CharSheet>
 		<Row>
-			<Box>name</Box>
+			<Box>
+				<Row>
+					<NamedField name="description">{character.description}</NamedField>
+					<NamedField narrow name="pronouns">{character.pronouns}</NamedField>
+				</Row>
+			</Box>
 		</Row>
 		<Row>
-			<Col>
+			<Col width="2">
 				<Box heading="Skills">skills</Box>
-				<Box heading="Stress">stress</Box>
-				<Box heading="Consequences">conc</Box>
+				<Box heading="Stress and Consequences">conc</Box>
 			</Col>
-			<Col>
-				<Box heading="Aspects">Aspects</Box>
+			<Col width="3">
+				<Box heading="Aspects">
+					{aspects}
+				</Box>
 				<Box heading="Stunts etc">Stunts etc</Box>
 			</Col>
 		</Row>

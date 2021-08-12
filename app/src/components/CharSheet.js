@@ -1,6 +1,5 @@
 
-import React from 'react'
-import styled, {css} from 'styled-components'
+import styled from 'styled-components'
 import {Col} from '../elements/Col'
 
 export const CharSheet = styled(Col)`

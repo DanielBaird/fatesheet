@@ -1,15 +1,15 @@
 
-export default {
+const amelia = {
 	player: 'Daniel Baird',
 	name: 'Amelia Thingy',
 	description: 'just a girl, y\'know',
 	pronouns: 'she/her',
 	aspectList: [
-		{ aspect: 'Canon', value: '' },
-		{ aspect: 'Tragic Flaw', value: '' },
-		{ aspect: 'Casting', value: '' },
-		{ aspect: 'Childhood', value: '' },
-		{ aspect: 'Heritage', value: '' }
+		{ aspect: 'Canon', value: 'Something I can\'t work out yet' },
+		{ aspect: 'Tragic Flaw', value: 'Seeing isn\'t believing' },
+		{ aspect: 'Casting', value: '...' },
+		{ aspect: 'Childhood', value: '...' },
+		{ aspect: 'Heritage', value: '...' }
 	],
 	skillList: [
 		{
@@ -43,3 +43,5 @@ export default {
 	]
 
 }
+
+;export default amelia
