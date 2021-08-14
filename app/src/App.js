@@ -2,14 +2,16 @@
 import { ThemeProvider } from 'styled-components'
 import './App.css'
 
-import {FullCharsheet} from './components/FullCharsheet'
+import {CharSelector} from './components/CharSelector'
 import fateSheetTheme from './themes/fs'
-import chData from './data/amelia'
+
+// import chData from './data/amelia'
+import { allCharacters } from './data/allChars'
 
 function App() {
 	return (
 		<ThemeProvider theme={fateSheetTheme}>
-			<FullCharsheet character={chData} />
+			<CharSelector characters={allCharacters} />
 		</ThemeProvider>
 
 	)

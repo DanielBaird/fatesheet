@@ -1,7 +1,7 @@
 
 const amelia = {
-	player: 'Daniel Baird',
-	name: 'Amelia Thingy',
+	player: 'Stephen Strange',
+	name: 'Doctor thingy',
 	description: 'just a girl, y\'know',
 	pronouns: 'she/her',
 	aspectList: [

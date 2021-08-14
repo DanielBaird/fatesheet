@@ -5,6 +5,7 @@ export const Row = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: start;
+	align-content: start;
 
 	${ props => {
 		if (props.narrow) { return css`flex: 0 0 auto;` }
