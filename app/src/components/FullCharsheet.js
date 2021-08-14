@@ -15,6 +15,10 @@ export const FullCharsheet = ({character}) => {
 		<NamedField key={a.aspect} name={a.aspect}>{a.value}</NamedField>
 	)
 
+	const stunts = character.stuntList.map( (s, i) =>
+		<NamedField key={i} name={s.name}>{s.description}</NamedField>
+	)
+
 	return <CharSheet>
 		<Row>
 			<Box>
@@ -30,7 +34,7 @@ export const FullCharsheet = ({character}) => {
 					<SkillsTable skills={character.skillList} />
 				</Box>
 				<Box heading="Stress and Consequences">
-					<Row>
+					<Row bottomPad>
 						{character.stressList.map( s => <StressTrack stress={s} />)}
 					</Row>
 					<ConsequencesTable consequences={character.consequencesList} />
@@ -40,7 +44,9 @@ export const FullCharsheet = ({character}) => {
 				<Box heading="Aspects">
 					{aspects}
 				</Box>
-				<Box heading="Stunts etc">Stunts etc</Box>
+				<Box heading="Stunts etc">
+					{stunts}
+				</Box>
 			</Col>
 		</Row>
 	</CharSheet>

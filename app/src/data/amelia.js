@@ -40,6 +40,11 @@ const amelia = {
 		{ severity: 'Mild', value: 2 },
 		{ severity: 'Moderate', value: 4 },
 		{ severity: 'Severe', value: 6 }
+	],
+	stuntList: [
+		{ name: 'standing backflip', description: 'from a stand, Amelia can do a cool backflip that gives her +4 to every roll' },
+		{ name: 'standing backflip', description: 'from a stand, Amelia can do a cool backflip that gives her +4 to every roll' },
+		{ name: 'Magic Missile', description: 'always hits' }
 	]
 
 }
