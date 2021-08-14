@@ -19,6 +19,9 @@ export const Col = styled.div`
 	${ props => props.pad && css`
 		padding: ${props.theme.gap};
 	`}
+	${ props => props.topPad && css`
+		padding-top: ${props.theme.gap};
+	`}
 	${ props => props.bottomPad && css`
 		padding-bottom: ${props.theme.gap};
 	`}

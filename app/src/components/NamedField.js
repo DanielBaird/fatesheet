@@ -13,8 +13,7 @@ export const NamedField = (props) => {
 const FieldHead = styled.div`
 	font-weight: bold;
 	text-transform: uppercase;
-	color: ${props => props.theme.smallHeadColor || 'inherit' };
-	opacity: ${props => props.theme.smallHeadFade || '1.0' };
+	color: ${props => props.theme.mutedTextColor || 'inherit' };
 	font-size: 0.75em;
 	margin-bottom: -0.1em;
 `

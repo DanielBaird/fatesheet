@@ -6,6 +6,8 @@ import {Box} from '../elements/Box'
 import {CharSheet} from './CharSheet'
 import {NamedField} from './NamedField'
 import {SkillsTable} from './SkillsTable'
+import { StressTrack } from './StressTrack'
+import { ConsequencesTable } from './ConsequencesTable'
 
 export const FullCharsheet = ({character}) => {
 
@@ -27,7 +29,12 @@ export const FullCharsheet = ({character}) => {
 				<Box heading="Skills">
 					<SkillsTable skills={character.skillList} />
 				</Box>
-				<Box heading="Stress and Consequences">conc</Box>
+				<Box heading="Stress and Consequences">
+					<Row>
+						{character.stressList.map( s => <StressTrack stress={s} />)}
+					</Row>
+					<ConsequencesTable consequences={character.consequencesList} />
+				</Box>
 			</Col>
 			<Col width="3">
 				<Box heading="Aspects">
