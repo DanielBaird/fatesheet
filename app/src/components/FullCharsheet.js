@@ -21,7 +21,7 @@ export const FullCharsheet = ({character}) => {
 
 	return <CharSheet>
 		<Row>
-			<Box>
+			<Box bigTitle={character.name}>
 				<Row>
 					<NamedField name="description">{character.description}</NamedField>
 					<NamedField narrow name="pronouns">{character.pronouns}</NamedField>

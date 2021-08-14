@@ -6,14 +6,18 @@ import {Col} from './Col'
 // --------------------------------------------------------
 export const Box = (props) => {
 
-	const headingBits = props.heading
+	let headingBits = props.heading
 		?.split(' and ')
 		.flatMap( (hb, i) => [hb, <Small key={i}> and </Small>])
 		.slice(0, -1)
 
+	if (props.bigTitle) {
+		headingBits = <BigHead>{props.bigTitle}</BigHead>
+	}
+
 	return <Col pad border margin doubleRightMargin>
 		<BoxHead>{headingBits}</BoxHead>
-		{props.children}
+		{ props.children }
 	</Col>
 }
 // --------------------------------------------------------
@@ -43,5 +47,28 @@ const BoxHead = styled.div`
 		0
 		calc(-1 * ${props => props.theme.gap} + -1 * ${props => props.theme.edgeWidth})
 	;
-
+`
+// --------------------------------------------------------
+const BigHead = styled.div`
+	position: absolute;
+	text-transform: none;
+	font-size: calc(1.3 * ${props => props.theme.headHeight});
+	top: -0.5em;
+	letter-spacing: -0.05em;
+	font-weight: 800;
+	color: #fff;
+	left: ${props => props.theme.gap};
+	height: calc(1.66 * ${props => props.theme.headHeight});
+	line-height: 1;
+	color: white;
+	text-shadow:
+		 2px  0   0.5px ${props => props.theme.edgeColor},
+		-2px  0   0.5px ${props => props.theme.edgeColor},
+		 0    2px 0.5px ${props => props.theme.edgeColor},
+		 0   -2px 0.5px ${props => props.theme.edgeColor},
+		 2px  2px 0.5px ${props => props.theme.edgeColor},
+		-2px  2px 0.5px ${props => props.theme.edgeColor},
+		 2px -2px 0.5px ${props => props.theme.edgeColor},
+		-2px -2px 0.5px ${props => props.theme.edgeColor}
+	;
 `
