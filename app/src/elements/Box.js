@@ -35,22 +35,13 @@ const BoxHead = styled.div`
 	height: ${props => props.theme.headHeight};
 	/* tweak the 1.0 to center all-caps text in the header bar */
 	line-height: calc(1.0 * ${props => props.theme.headHeight});
+	border-bottom-right-radius: calc(1 * ${props => props.theme.gap});
 
 	margin:
 		calc(-1 * ${props => props.theme.edgeWidth})
-		calc(-1 * ${props => props.theme.edgeWidth} + -1 * ${props => props.theme.gap})
+		calc(-1 * ${props => props.theme.edgeWidth} + -2 * ${props => props.theme.gap})
 		0
 		calc(-1 * ${props => props.theme.gap} + -1 * ${props => props.theme.edgeWidth})
 	;
 
-	&:after {
-		content: '';
-		background-color: ${props => props.theme.edgeColor};
-		height: ${props => props.theme.headHeight};
-		width: ${props => props.theme.headHeight};
-		border-bottom-right-radius: calc(0.5 * ${props => props.theme.headHeight});
-		position: absolute;
-		right: calc(-0.5 * (${props => props.theme.headHeight} + ${props => props.theme.edgeWidth}));
-		right: calc(-0.5 * ${props => props.theme.headHeight});
-	}
 `

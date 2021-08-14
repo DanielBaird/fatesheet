@@ -10,7 +10,7 @@ export const NamedField = (props) => {
 	</Col>
 }
 // --------------------------------------------------------
-export const FieldHead = styled.div`
+const FieldHead = styled.div`
 	font-weight: bold;
 	text-transform: uppercase;
 	color: ${props => props.theme.smallHeadColor || 'inherit' };

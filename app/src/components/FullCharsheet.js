@@ -5,6 +5,7 @@ import {Row} from '../elements/Row'
 import {Box} from '../elements/Box'
 import {CharSheet} from './CharSheet'
 import {NamedField} from './NamedField'
+import {SkillsTable} from './SkillsTable'
 
 export const FullCharsheet = ({character}) => {
 
@@ -23,7 +24,9 @@ export const FullCharsheet = ({character}) => {
 		</Row>
 		<Row>
 			<Col width="2">
-				<Box heading="Skills">skills</Box>
+				<Box heading="Skills">
+					<SkillsTable skills={character.skillList} />
+				</Box>
 				<Box heading="Stress and Consequences">conc</Box>
 			</Col>
 			<Col width="3">

@@ -23,11 +23,11 @@ export const Col = styled.div`
 		padding-bottom: ${props.theme.gap};
 	`}
 	${ props => props.margin && css`
-		margin-right: calc(${props.theme.edgeWidth} + ${props.theme.gap});
-		margin-bottom: calc(${props.theme.edgeWidth} + ${props.theme.gap});
+		margin-right: ${props.theme.gap};
+		margin-bottom: ${props.theme.gap};
 	`}
 	${ props => props.doubleRightMargin && css`
-		margin-right: calc(${props.theme.edgeWidth} + 2 * ${props.theme.gap});
+		margin-right: calc(2 * ${props.theme.gap});
 	`}
 	${props => props.border && css`
 		border: ${props.theme.edgeWidth} solid ${props.theme.edgeColor};

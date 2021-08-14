@@ -17,13 +17,13 @@ const amelia = {
 			skills: []
 		},{
 			level: 'Great', adjustment: '+4',
-			skills: []
+			skills: ['Brilliant']
 		},{
 			level: 'Good', adjustment: '+3',
-			skills: []
+			skills: ['Classy']
 		},{
 			level: 'Fair', adjustment: '+2',
-			skills: []
+			skills: ['Dangerous', 'Savvy', 'Treacherous']
 		},{
 			level: 'Average', adjustment: '+1',
 			skills: []
