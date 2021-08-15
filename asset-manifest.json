@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/fatesheet/static/css/main.a0778a97.chunk.css",
-    "main.js": "/fatesheet/static/js/main.9e666df5.chunk.js",
-    "main.js.map": "/fatesheet/static/js/main.9e666df5.chunk.js.map",
+    "main.css": "/fatesheet/static/css/main.e02770ec.chunk.css",
+    "main.js": "/fatesheet/static/js/main.7c16ec64.chunk.js",
+    "main.js.map": "/fatesheet/static/js/main.7c16ec64.chunk.js.map",
     "runtime-main.js": "/fatesheet/static/js/runtime-main.8ffa1a74.js",
     "runtime-main.js.map": "/fatesheet/static/js/runtime-main.8ffa1a74.js.map",
     "static/js/2.b99aea77.chunk.js": "/fatesheet/static/js/2.b99aea77.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.a7acf35d.chunk.js": "/fatesheet/static/js/3.a7acf35d.chunk.js",
     "static/js/3.a7acf35d.chunk.js.map": "/fatesheet/static/js/3.a7acf35d.chunk.js.map",
     "index.html": "/fatesheet/index.html",
-    "static/css/main.a0778a97.chunk.css.map": "/fatesheet/static/css/main.a0778a97.chunk.css.map",
+    "static/css/main.e02770ec.chunk.css.map": "/fatesheet/static/css/main.e02770ec.chunk.css.map",
     "static/js/2.b99aea77.chunk.js.LICENSE.txt": "/fatesheet/static/js/2.b99aea77.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8ffa1a74.js",
     "static/js/2.b99aea77.chunk.js",
-    "static/css/main.a0778a97.chunk.css",
-    "static/js/main.9e666df5.chunk.js"
+    "static/css/main.e02770ec.chunk.css",
+    "static/js/main.7c16ec64.chunk.js"
   ]
 }
