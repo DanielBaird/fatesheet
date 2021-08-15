@@ -4,14 +4,16 @@ import './App.css'
 
 import {CharSelector} from './components/CharSelector'
 import fateSheetTheme from './themes/fs'
+import { PageWrapper } from './components/PageWrapper'
 
-// import chData from './data/amelia'
 import { allCharacters } from './data/allChars'
 
 function App() {
 	return (
 		<ThemeProvider theme={fateSheetTheme}>
-			<CharSelector characters={allCharacters} />
+			<PageWrapper>
+				<CharSelector characters={allCharacters} />
+			</PageWrapper>
 		</ThemeProvider>
 
 	)

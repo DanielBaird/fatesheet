@@ -5,9 +5,9 @@ import styled from 'styled-components'
 // --------------------------------------------------------
 export const SkillsTable = ({skills}) => {
 
-	return <SkillTable>
+	return <SkillTable><tbody>
 		{ skills.map( (s,i) => <SkillRow key={i} skill={s} /> ) }
-	</SkillTable>
+	</tbody></SkillTable>
 }
 // --------------------------------------------------------
 const SkillRow = ({skill}) => {

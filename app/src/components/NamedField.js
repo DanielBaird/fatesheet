@@ -20,7 +20,8 @@ const FieldHead = styled.div`
 	margin-bottom: -0.1em;
 `
 // --------------------------------------------------------
-const FieldText = styled.p`
+const FieldText = styled.div`
 	margin: 0;
 	white-space: wrap;
 `
+// --------------------------------------------------------

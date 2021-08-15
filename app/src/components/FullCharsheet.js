@@ -35,7 +35,7 @@ export const FullCharsheet = ({character}) => {
 				</Box>
 				<Box heading="Stress and Consequences">
 					<Row bottomPad>
-						{character.stressList.map( s => <StressTrack stress={s} />)}
+						{character.stressList.map( (s,i) => <StressTrack key={i} stress={s} />)}
 					</Row>
 					<ConsequencesTable consequences={character.consequencesList} />
 				</Box>
