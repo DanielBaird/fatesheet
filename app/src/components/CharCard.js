@@ -13,11 +13,11 @@ export const CharCard = ({character, selected, onSelect}) => {
 }
 // --------------------------------------------------------
 const Card = styled.div`
-	margin: 1em 0.5em;
-	border: 3px solid ${props => props.selected ? '#369' : '#fff' };
-	padding: 1em 2em 0.33em;
+	margin: 1em 0.25em;
+	border: 3px solid ${props => props.selected ? props.theme.selectionHighlight : '#ffffffff' };
+	padding: 0.66em 0.5em 0 1em;
 
 	&:hover {
-		border-color: red;
+		border-color: ${props => props.theme.selectionHover };
 	}
 `

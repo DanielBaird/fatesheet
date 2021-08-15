@@ -8,12 +8,12 @@ export const Col = styled.div`
 
 	${ props => {
 		if (props.narrow) {
-			return css`flex: 0 0 auto;`
+			return css`flex: 0 1 auto;`
 		}
 		if (props.width) {
-			return css`flex: ${props.width} 0 0;`
+			return css`flex: ${props.width} 1 0;`
 		}
-		return css`flex: 1 0 auto;`
+		return css`flex: 1 1 auto;`
 	}}
 
 	${ props => props.pad && css`
@@ -28,6 +28,9 @@ export const Col = styled.div`
 	${ props => props.margin && css`
 		margin-right: ${props.theme.gap};
 		margin-bottom: ${props.theme.gap};
+	`}
+	${ props => props.rightMargin && css`
+		margin-right: ${props.theme.gap};
 	`}
 	${ props => props.doubleRightMargin && css`
 		margin-right: calc(2 * ${props.theme.gap});

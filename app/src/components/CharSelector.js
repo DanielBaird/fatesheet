@@ -16,7 +16,7 @@ export const CharSelector = ({characters}) => {
 	)
 
 	return <>
-		<Row>{selectionList}</Row>
+		<Row center>{selectionList}</Row>
 		<FullCharsheet character={characters[current]} />
 	</>
 }

@@ -4,7 +4,6 @@ import styled, {css} from 'styled-components'
 export const Row = styled.div`
 	display: flex;
 	flex-direction: row;
-	justify-content: start;
 	align-content: start;
 
 	${ props => {
@@ -13,6 +12,11 @@ export const Row = styled.div`
 		                    return css`flex: 1 0 auto;`
 	}}
 
+	${ props => props.center ?
+		css`justify-content: center;`
+	:
+		css`justify-content: start;`
+	}
 	${ props => props.pad && css`
 		padding: ${props.theme.gap};
 	`}

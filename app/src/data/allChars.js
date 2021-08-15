@@ -1,8 +1,12 @@
 
 import amelia from "./amelia"
-import other from "./otherperson"
+import wilfred from "./wilfred"
+import breanna from "./breanna"
+import evelyn from "./evelyn"
 
 export const allCharacters = [
 	amelia,
-	other
+	wilfred,
+	breanna,
+	evelyn
 ]

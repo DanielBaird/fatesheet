@@ -1,16 +1,16 @@
 
 const character = {
-	player: 'Daniel Baird',
-	name: 'Amelia Astermere',
-	description: 'Y\'know, just some girl who came back to a town she left when she was very young',
+	player: 'Craig',
+	name: 'Evelyn Osmus',
+	description: 'Proud scion of the Osmus family, has earned her degree and now working in the family business',
 	pronouns: 'she/her',
 	aspectList: [
-		{ aspect: 'Canon', value: 'Not sure' },
-		{ aspect: 'Tragic Flaw', value: 'Seeing isn\'t believing' },
+		{ aspect: 'Canon', value: 'Family above all' },
+		{ aspect: 'Tragic Flaw', value: 'Business operandi and agreements' },
 		{ aspect: 'Casting', value: 'Not sure' },
-		{ aspect: 'Childhood', value: 'Not sure' },
-		{ aspect: 'Heritage', value: 'Not sure' },
-		{ aspect: 'Antagonist', value: 'Not sure'}
+		{ aspect: 'Childhood', value: 'Rivel to her elder sibling' },
+		{ aspect: 'Heritage', value: 'The "poster child" of her family' },
+		{ aspect: 'Antagonist', value: '-'}
 	],
 	skillList: [
 		{
@@ -18,19 +18,19 @@ const character = {
 			skills: []
 		},{
 			level: 'Great', adjustment: '+4',
-			skills: ['???']
+			skills: []
 		},{
 			level: 'Good', adjustment: '+3',
-			skills: ['???']
+			skills: []
 		},{
 			level: 'Fair', adjustment: '+2',
-			skills: ['???', '???']
+			skills: []
 		},{
 			level: 'Average', adjustment: '+1',
-			skills: ['???']
+			skills: []
 		},{
 			level: 'Unranked',
-			skills: ['???']
+			skills: []
 		},
 	],
 	stressList: [
@@ -43,7 +43,7 @@ const character = {
 		{ severity: 'Severe', value: 6 }
 	],
 	stuntList: [
-		{ name: 'Breathwork? magic', description: 'I don\'t remember if this is the right one' }
+		{ name: 'Bonework magic', description: 'honestly can\'t remember' }
 	]
 
 }

@@ -6,13 +6,16 @@ const theme = {
 	headHeight: '2rem',
 
 	textColor: '#025 todo: make work',
-	mutedTextColor: '#acf',
+	mutedTextColor: '#68a',
 
 	edgeWidth: '1px',
-	edgeColor: '#025',
+	edgeColor: '#035',
 
-	stressBorder: '2px',
-	stressColor: '#999',
+	stressBorder: '3px',
+	stressColor: '#469',
+
+	selectionHighlight: '#666',
+	selectionHover: '#f93',
 }
 
 ;export default theme
