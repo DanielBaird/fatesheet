@@ -11,6 +11,7 @@ export const CharSelector = ({characters}) => {
 	const selectionList = characters.map( (c,i) =>
 		<CharCard
 			key={ i }
+			icon="⬩"
 			character={ c }
 			selected={ i===current }
 			onSelect={ ()=> setCurrent(i) }
@@ -20,6 +21,7 @@ export const CharSelector = ({characters}) => {
 	return <>
 		<Row center>
 			<CharCard
+				icon="❖"
 				character={{player: "everyone", name:"Summaries"}}
 				selected={ current===null }
 				onSelect={ ()=> setCurrent(null) }

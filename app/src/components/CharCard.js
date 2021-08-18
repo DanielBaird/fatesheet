@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { NamedField } from './NamedField'
 
-export const CharCard = ({character, selected, onSelect}) => {
-
+export const CharCard = ({character, icon, selected, onSelect}) => {
+	// the ' ' in the name props below is a hairspace
 	return <Card onClick={onSelect} selected={selected}>
-		<NamedField name={character.player}>
+		<NamedField name={icon + ' ' + character.player}>
 			{character.name}
 		</NamedField>
 	</Card>
