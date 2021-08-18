@@ -13,12 +13,19 @@ export const CharSelector = ({characters}) => {
 			key={ i }
 			character={ c }
 			selected={ i===current }
-			onSelect={ i===current ? ()=> setCurrent(null) : () => setCurrent(i) }
+			onSelect={ ()=> setCurrent(i) }
 		/>
 	)
 
 	return <>
-		<Row center>{selectionList}</Row>
+		<Row center>
+			<CharCard
+				character={{player: "everyone", name:"Summaries"}}
+				selected={ current===null }
+				onSelect={ ()=> setCurrent(null) }
+			/>
+			{selectionList}
+		</Row>
 		{ current === null ?
 			<AllCharacterSummary characters={characters} />
 		:
