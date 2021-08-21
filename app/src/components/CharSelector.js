@@ -4,9 +4,13 @@ import { CharCard } from './CharCard'
 import { Row } from '../elements/Row'
 import { AllCharacterSummary } from './AllCharacterSummary'
 
-export const CharSelector = ({characters}) => {
+const PLAYERS = -1
+const NPCS = -2
+const PLACES = -3
 
-	const [current, setCurrent] = useState(null)
+export const CharSelector = ({characters, npcs, places}) => {
+
+	const [current, setCurrent] = useState(PLAYERS)
 
 	const selectionList = characters.map( (c,i) =>
 		<CharCard
@@ -19,19 +23,30 @@ export const CharSelector = ({characters}) => {
 	)
 
 	return <>
-		<Row center>
+		<Row wrap center>
+			{selectionList}
 			<CharCard
 				icon="❖"
-				character={{player: "everyone", name:"Summaries"}}
-				selected={ current===null }
-				onSelect={ ()=> setCurrent(null) }
+				character={{player: "summary", name:"Players"}}
+				selected={ current===PLAYERS }
+				onSelect={ ()=> setCurrent(PLAYERS) }
 			/>
-			{selectionList}
+			<CharCard
+				icon="❖"
+				character={{player: "summary", name:"NPCs"}}
+				selected={ current===NPCS }
+				onSelect={ ()=> setCurrent(NPCS) }
+			/>
+			<CharCard
+				icon="❖"
+				character={{player: "summary", name:"Places"}}
+				selected={ current===PLACES }
+				onSelect={ ()=> setCurrent(PLACES) }
+			/>
 		</Row>
-		{ current === null ?
-			<AllCharacterSummary characters={characters} />
-		:
-			<FullCharsheet character={characters[current]} />
-		}
+		<br /><br />
+		{ current === NPCS && <AllCharacterSummary characters={npcs} /> }
+		{ current === PLAYERS && <AllCharacterSummary characters={characters} /> }
+		{ current >= 0 && <FullCharsheet character={characters[current]} /> }
 	</>
 }

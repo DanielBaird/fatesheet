@@ -12,6 +12,10 @@ export const Row = styled.div`
 		                    return css`flex: 1 0 auto;`
 	}}
 
+	${ props => props.wrap && css`
+		flex-wrap: wrap;
+	`}
+
 	${ props => props.center ?
 		css`justify-content: center;`
 	:

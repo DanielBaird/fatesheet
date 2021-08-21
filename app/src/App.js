@@ -6,13 +6,16 @@ import {CharSelector} from './components/CharSelector'
 import fateSheetTheme from './themes/fs'
 import { PageWrapper } from './components/PageWrapper'
 
-import { allCharacters } from './data/allChars'
+import { allCharacters, allNpcs } from './data/allChars'
 
 function App() {
 	return (
 		<ThemeProvider theme={fateSheetTheme}>
 			<PageWrapper>
-				<CharSelector characters={allCharacters} />
+				<CharSelector
+					characters={allCharacters}
+					npcs={allNpcs}
+				/>
 			</PageWrapper>
 		</ThemeProvider>
 
