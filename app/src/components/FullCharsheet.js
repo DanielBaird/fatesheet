@@ -8,6 +8,7 @@ import {NamedField} from './NamedField'
 import {SkillsTable} from './SkillsTable'
 import { StressTrack } from './StressTrack'
 import { ConsequencesTable } from './ConsequencesTable'
+import { FatePointTrack } from './FatePointTrack'
 
 export const FullCharsheet = ({character}) => {
 
@@ -20,6 +21,7 @@ export const FullCharsheet = ({character}) => {
 	)
 
 	return <CharSheet>
+		{ character.fatePoints && <FatePointTrack points={character.fatePoints} /> }
 		<Row>
 			<Box bigTitle={character.name}>
 				<Row>
@@ -30,7 +32,7 @@ export const FullCharsheet = ({character}) => {
 		</Row>
 		<Row>
 			<Col width="2">
-				<Box heading="Skills">
+				<Box heading="Assets">
 					<SkillsTable skills={character.skillList} />
 				</Box>
 				<Box heading="Stress and Consequences">

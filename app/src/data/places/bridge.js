@@ -8,23 +8,17 @@ const character = {
 	],
 	skillList: [
 		{
-			level: 'Superb', adjustment: '+5',
-			skills: []
+			level: 'Superb', adjustment: '+5', skills: []
 		},{
-			level: 'Great', adjustment: '+4',
-			skills: ['Treacherous']
+			level: 'Great', adjustment: '+4', skills: ['Treacherous']
 		},{
-			level: 'Good', adjustment: '+3',
-			skills: []
+			level: 'Good', adjustment: '+3', skills: []
 		},{
-			level: 'Fair', adjustment: '+2',
-			skills: ['Dangerous', 'Sensitive']
+			level: 'Fair', adjustment: '+2', skills: ['Dangerous', 'Sensitive']
 		},{
-			level: 'Average', adjustment: '+1',
-			skills: []
+			level: 'Average', adjustment: '+1', skills: []
 		},{
-			level: 'Unranked',
-			skills: ['Brilliant', 'Classy', 'Powerful', 'Savvy']
+			level: 'Unranked', skills: ['Brilliant', 'Classy', 'Powerful', 'Savvy']
 		},
 	]
 }

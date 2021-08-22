@@ -13,6 +13,7 @@ const theme = {
 
 	stressBorder: '3px',
 	stressColor: '#469',
+	stressBonusColor: '#bbb',
 
 	selectionHighlight: '#666',
 	selectionHover: '#f93',

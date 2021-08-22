@@ -4,7 +4,6 @@ import styled, {css} from 'styled-components'
 export const Row = styled.div`
 	display: flex;
 	flex-direction: row;
-	align-content: start;
 
 	${ props => {
 		if (props.narrow) { return css`flex: 0 0 auto;` }
@@ -19,7 +18,11 @@ export const Row = styled.div`
 	${ props => props.center ?
 		css`justify-content: center;`
 	:
-		css`justify-content: start;`
+		( props.right ?
+			css`justify-content: flex-end;`
+		:
+			css`justify-content: flex-start;`
+		)
 	}
 	${ props => props.pad && css`
 		padding: ${props.theme.gap};
@@ -33,6 +36,9 @@ export const Row = styled.div`
 	${ props => props.margin && css`
 		margin-right: ${props.theme.gap};
 		margin-bottom: ${props.theme.gap};
+	`}
+	${ props => props.marginRight && css`
+		margin-right: ${props.theme.gap};
 	`}
 	${ props => props.doubleRightMargin && css`
 		margin-right: calc(2 * ${props.theme.gap});

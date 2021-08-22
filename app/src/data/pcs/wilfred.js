@@ -4,6 +4,7 @@ const character = {
 	name: 'Wilfred Bishop',
 	description: 'The long term mayor of Moon Island, using his influence to keep the existence of magic a secret from the outside world',
 	pronouns: 'he/him',
+	fatePoints: { refresh: 3, spaces: 5 },
 	aspectList: [
 		{ aspect: 'Canon', value: 'I will keep up appearances at all costs' },
 		{ aspect: 'Tragic Flaw', value: 'There is no price too great' },
@@ -34,8 +35,7 @@ const character = {
 		},
 	],
 	stressList: [
-		{ stressType: 'Physical Stress', values: [1, 2] },
-		{ stressType: 'Mental Stress',   values: [1, 2] }
+		{ stressType: 'Stress', values: [1, 2], bonusValues: [3, 4, 5] }
 	],
 	consequencesList: [
 		{ severity: 'Mild', value: 2 },

@@ -4,6 +4,7 @@ const character = {
 	name: 'Breanna Foster',
 	description: '',
 	pronouns: 'she/her',
+	fatePoints: { refresh: 3, spaces: 5 },
 	aspectList: [
 		{ aspect: 'Canon', value: 'Healing heart' },
 		{ aspect: 'Tragic Flaw', value: 'Bone debt' },
@@ -34,8 +35,7 @@ const character = {
 		},
 	],
 	stressList: [
-		{ stressType: 'Physical Stress', values: [1, 2] },
-		{ stressType: 'Mental Stress',   values: [1, 2] }
+		{ stressType: 'Stress', values: [1, 2], bonusValues: [3, 4, 5] }
 	],
 	consequencesList: [
 		{ severity: 'Mild', value: 2 },
