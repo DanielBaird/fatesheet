@@ -47,6 +47,7 @@ export const CharSelector = ({characters, npcs, places}) => {
 		<br /><br />
 		{ current === NPCS && <AllCharacterSummary characters={npcs} /> }
 		{ current === PLAYERS && <AllCharacterSummary characters={characters} /> }
+		{ current === PLACES && <AllCharacterSummary characters={places} /> }
 		{ current >= 0 && <FullCharsheet character={characters[current]} /> }
 	</>
 }

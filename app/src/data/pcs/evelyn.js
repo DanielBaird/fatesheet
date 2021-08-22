@@ -7,8 +7,8 @@ const character = {
 	aspectList: [
 		{ aspect: 'Canon', value: 'Family above all' },
 		{ aspect: 'Tragic Flaw', value: 'Business operandi and agreements' },
-		{ aspect: 'Casting', value: 'Not sure' },
-		{ aspect: 'Childhood', value: 'Rivel to her elder sibling' },
+		{ aspect: 'Casting', value: 'Kate Beckinsale from Underworld' },
+		{ aspect: 'Childhood', value: 'Rival to her elder sibling' },
 		{ aspect: 'Heritage', value: 'The "poster child" of her family' },
 		{ aspect: 'Antagonist', value: '-'}
 	],
@@ -21,16 +21,16 @@ const character = {
 			skills: []
 		},{
 			level: 'Good', adjustment: '+3',
-			skills: []
+			skills: ['Classy']
 		},{
 			level: 'Fair', adjustment: '+2',
-			skills: []
+			skills: ['Savvy','Brilliant']
 		},{
 			level: 'Average', adjustment: '+1',
-			skills: []
+			skills: ['Sensitive']
 		},{
 			level: 'Unranked',
-			skills: []
+			skills: ['Dangerous','Powerful','Treacherous']
 		},
 	],
 	stressList: [
@@ -43,7 +43,7 @@ const character = {
 		{ severity: 'Severe', value: 6 }
 	],
 	stuntList: [
-		{ name: 'Bonework magic', description: 'honestly can\'t remember' }
+		{ name: 'Bonework magic', description: 'Dangerous. Deeds for the dead. Animation of inert material. Prayer to selfish spirits. Restless and sensitive.' }
 	]
 
 }

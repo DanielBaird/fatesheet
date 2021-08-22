@@ -1,15 +1,10 @@
 
 const character = {
-	name: 'Trickey Dicky',
-	description: 'A new reporter just arrived in town, ready to dig into whatever dirt he can find',
+	name: 'Richard "Tricky Dicky" Trickton',
+	description: 'Ambitious investigative reporter who recently took over at the Moon Island Mirror, eager to make a name for himself',
 	pronouns: 'he/him',
 	aspectList: [
-		{ aspect: 'Canon', value: 'I will keep up appearances at all costs' },
-		{ aspect: 'Tragic Flaw', value: 'There is no price too great' },
-		{ aspect: 'Casting', value: 'Not sure' },
-		{ aspect: 'Childhood', value: 'Estranged from the Bishop family' },
-		{ aspect: 'Heritage', value: '"Experienced" the Salem witch trials' },
-		{ aspect: 'Antagonist', value: 'The new reporter looking to expose the dirty secrets of Moon Island'}
+		{ aspect: 'Antagonist', value: 'mayor Wilfred Bishop'}
 	],
 	skillList: [
 		{
@@ -17,34 +12,21 @@ const character = {
 			skills: []
 		},{
 			level: 'Great', adjustment: '+4',
-			skills: ['Treacherous']
+			skills: ['Savvy']
 		},{
 			level: 'Good', adjustment: '+3',
-			skills: []
+			skills: ['Brilliant']
 		},{
 			level: 'Fair', adjustment: '+2',
-			skills: ['Sensitive', 'Powerful']
+			skills: []
 		},{
 			level: 'Average', adjustment: '+1',
 			skills: []
 		},{
 			level: 'Unranked',
-			skills: ['Brilliant', 'Classy', 'Dangerous', 'Savvy']
+			skills: ['Classy', 'Dangerous', 'Treacherous', 'Sensitive', 'Powerful']
 		},
-	],
-	stressList: [
-		{ stressType: 'Physical Stress', values: [1, 2] },
-		{ stressType: 'Mental Stress',   values: [1, 2] }
-	],
-	consequencesList: [
-		{ severity: 'Mild', value: 2 },
-		{ severity: 'Moderate', value: 4 },
-		{ severity: 'Severe', value: 6 }
-	],
-	stuntList: [
-		{ name: 'Breathwork magic', description: 'knowledge outside my ken; cold and logical' }
 	]
-
 }
 
 ;export default character

@@ -6,7 +6,7 @@ export const CharacterSummary = ({character}) => {
 	let skillList = character.skillList.reduce( (list, c)=>{
 		c.skills.forEach( (s)=> {
 			const adjust = c.adjustment || '+0'
-			list.push(<span>{'' + s + ' ' + adjust}</span>)
+			list.push(<span style={{whiteSpace: 'nowrap'}}>{s + ' ' + adjust}</span>)
 			list.push(<SubtleText> / </SubtleText>)
 		})
 		return list
