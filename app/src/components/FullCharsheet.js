@@ -3,7 +3,6 @@ import React from 'react'
 import {Col} from '../elements/Col'
 import {Row} from '../elements/Row'
 import {Box} from '../elements/Box'
-import {CharSheet} from './CharSheet'
 import {NamedField} from './NamedField'
 import {SkillsTable} from './SkillsTable'
 import { StressTrack } from './StressTrack'
@@ -22,7 +21,7 @@ export const FullCharsheet = ({character}) => {
 		<NamedField key={i} name={s.name}>{s.description}</NamedField>
 	)
 
-	return <CharSheet>
+	return <Col>
 		{ character.fatePoints && <FatePointTrack points={character.fatePoints} /> }
 		<Row>
 			<Box bigTitle={character.name}>
@@ -53,5 +52,5 @@ export const FullCharsheet = ({character}) => {
 				</Box>
 			</Col>
 		</Row>
-	</CharSheet>
+	</Col>
 }

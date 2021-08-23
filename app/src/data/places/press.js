@@ -15,7 +15,7 @@ const character = {
 			skills: ['Treacherous']
 		},{
 			level: 'Good', adjustment: '+3',
-			skills: ['']
+			skills: []
 		},{
 			level: 'Fair', adjustment: '+2',
 			skills: ['Sensitive', 'Powerful']

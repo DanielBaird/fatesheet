@@ -15,19 +15,12 @@ const character = {
 		{ aspect: 'Current Intent', fill: 2 }
 	],
 	skillList: [
-		{
-			level: 'Superb', adjustment: '+5', skills: []
-		},{
-			level: 'Great', adjustment: '+4', skills: []
-		},{
-			level: 'Good', adjustment: '+3', skills: ['Brilliant','Sensitive']
-		},{
-			level: 'Fair', adjustment: '+2', skills: []
-		},{
-			level: 'Average', adjustment: '+1', skills: ['Savvy']
-		},{
-			level: 'Unranked', skills: ['Classy','Dangerous','Powerful','Treacherous']
-		},
+		{ level: 'Superb', adjustment: '+5', skills: [] },
+		{ level: 'Great', adjustment: '+4', skills: [] },
+		{ level: 'Good', adjustment: '+3', skills: ['Brilliant','Sensitive'] },
+		{ level: 'Fair', adjustment: '+2', skills: [] },
+		{ level: 'Average', adjustment: '+1', skills: ['Savvy'] },
+		{ level: 'Unranked', skills: ['Classy','Dangerous','Powerful','Treacherous'] },
 	],
 	stressList: [
 		{ stressType: 'Stress', values: [1, 2], bonusValues: [3, 4, 5] }
@@ -35,7 +28,9 @@ const character = {
 	consequencesList: [
 		{ severity: 'Mild', value: 2 },
 		{ severity: 'Moderate', value: 4 },
-		{ severity: 'Severe', value: 6 }
+		{ severity: 'Severe', value: 6 },
+		{ severity: 'Mild', bonusValue: 2 },
+		{ severity: 'Mild', bonusValue: 2 },
 	],
 	stuntList: [
 		{ name: 'Skinwork magic', description: 'considering switching to breathwork' }

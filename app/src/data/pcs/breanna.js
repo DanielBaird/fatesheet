@@ -41,7 +41,9 @@ const character = {
 	consequencesList: [
 		{ severity: 'Mild', value: 2 },
 		{ severity: 'Moderate', value: 4 },
-		{ severity: 'Severe', value: 6 }
+		{ severity: 'Severe', value: 6 },
+		{ severity: 'Mild', bonusValue: 2 },
+		{ severity: 'Mild', bonusValue: 2 }
 	],
 	stuntList: [
 		{ name: 'Bloodwork magic', description: 'passion and soul and enthusiasm and stuff' }

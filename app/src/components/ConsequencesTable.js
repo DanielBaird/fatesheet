@@ -1,6 +1,6 @@
 
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import {Col} from '../elements/Col'
 import {Row} from '../elements/Row'
 import {NamedField} from './NamedField'
@@ -15,13 +15,19 @@ export const ConsequencesTable = ({consequences}) => {
 }
 // --------------------------------------------------------
 const Consequence = ({con}) => {
-	return <ConsequenceRow>
-		<StressBox>{con.value}</StressBox>
+	return <ConsequenceRow bonus={!!con.bonusValue}>
+		<StressBox bonus={!!con.bonusValue}>
+			{con.value || con.bonusValue}
+		</StressBox>
 		<NamedField name={con.severity} />
 	</ConsequenceRow>
 }
 // --------------------------------------------------------
 const ConsequenceRow = styled(Row)`
 	padding: ${props => props.theme.gap } 0;
-	border-top: 1px solid ${props => props.theme.mutedTextColor };
+	${ props => props.bonus ?
+		css`border-top: 1px solid ${props => props.theme.stressBonusColor };`
+	:
+		css`border-top: 1px solid ${props => props.theme.mutedTextColor };`
+	}
 `

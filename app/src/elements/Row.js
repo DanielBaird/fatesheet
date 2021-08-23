@@ -37,6 +37,9 @@ export const Row = styled.div`
 		margin-right: ${props.theme.gap};
 		margin-bottom: ${props.theme.gap};
 	`}
+	${ props => props.doubleBottomMargin && css`
+		margin-bottom: calc(2 * ${props.theme.gap});
+	`}
 	${ props => props.marginRight && css`
 		margin-right: ${props.theme.gap};
 	`}
@@ -45,5 +48,9 @@ export const Row = styled.div`
 	`}
 	${props => props.border && css`
 		border: ${props.theme.edgeWidth} solid ${props.theme.edgeColor};
+	`}
+
+	${props => props.noPrint && css`
+		@media print { display: none; }
 	`}
 `

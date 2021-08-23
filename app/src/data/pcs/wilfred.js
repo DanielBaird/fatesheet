@@ -41,7 +41,9 @@ const character = {
 	consequencesList: [
 		{ severity: 'Mild', value: 2 },
 		{ severity: 'Moderate', value: 4 },
-		{ severity: 'Severe', value: 6 }
+		{ severity: 'Severe', value: 6 },
+		{ severity: 'Mild', bonusValue: 2 },
+		{ severity: 'Mild', bonusValue: 2 }
 	],
 	stuntList: [
 		{ name: 'Breathwork magic', description: 'Knowledge outside my ken; cold and logical. My preferred invocation is the phrase "Let me level with you..."' }

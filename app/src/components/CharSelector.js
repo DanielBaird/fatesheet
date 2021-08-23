@@ -7,7 +7,7 @@ import { AllCharacterSummary } from './AllCharacterSummary'
 const PLAYERS = -1
 const NPCS = -2
 const PLACES = -3
-
+// --------------------------------------------------------
 export const CharSelector = ({characters, npcs, places}) => {
 
 	const [current, setCurrent] = useState(PLAYERS)
@@ -23,7 +23,7 @@ export const CharSelector = ({characters, npcs, places}) => {
 	)
 
 	return <>
-		<Row wrap center>
+		<Row wrap center noPrint doubleBottomMargin>
 			{selectionList}
 			<CharCard
 				icon="❖"
@@ -44,10 +44,10 @@ export const CharSelector = ({characters, npcs, places}) => {
 				onSelect={ ()=> setCurrent(PLACES) }
 			/>
 		</Row>
-		<br /><br />
 		{ current === NPCS && <AllCharacterSummary characters={npcs} /> }
 		{ current === PLAYERS && <AllCharacterSummary characters={characters} /> }
 		{ current === PLACES && <AllCharacterSummary characters={places} /> }
 		{ current >= 0 && <FullCharsheet character={characters[current]} /> }
 	</>
 }
+// --------------------------------------------------------

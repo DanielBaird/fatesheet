@@ -41,7 +41,9 @@ const character = {
 	consequencesList: [
 		{ severity: 'Mild', value: 2 },
 		{ severity: 'Moderate', value: 4 },
-		{ severity: 'Severe', value: 6 }
+		{ severity: 'Severe', value: 6 },
+		{ severity: 'Mild', bonusValue: 2 },
+		{ severity: 'Mild', bonusValue: 2 }
 	],
 	stuntList: [
 		{ name: 'Bonework magic', description: 'Dangerous. Deeds for the dead. Animation of inert material. Prayer to selfish spirits. Restless and sensitive.' }
