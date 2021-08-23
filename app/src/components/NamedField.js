@@ -1,6 +1,6 @@
 
 import React from 'react'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import {Col} from '../elements/Col'
 
 export const NamedField = (props) => {
@@ -12,12 +12,13 @@ export const NamedField = (props) => {
 	</Col>
 }
 // --------------------------------------------------------
-const FieldHead = styled.div`
+export const FieldHead = styled.div`
 	font-weight: bold;
 	text-transform: uppercase;
 	color: ${props => props.theme.mutedTextColor || 'inherit' };
 	font-size: 0.75em;
 	margin-bottom: -0.1em;
+	${props => props.right && css`text-align: right` }
 `
 // --------------------------------------------------------
 const FieldText = styled.div`
