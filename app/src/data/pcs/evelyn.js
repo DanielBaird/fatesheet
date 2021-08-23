@@ -11,7 +11,8 @@ const character = {
 		{ aspect: 'Casting', value: 'Kate Beckinsale from Underworld' },
 		{ aspect: 'Childhood', value: 'Rival to her elder sibling' },
 		{ aspect: 'Heritage', value: 'The "poster child" of her family' },
-		{ aspect: 'Antagonist', value: '-'}
+		{ aspect: 'Antagonist'},
+		{ aspect: 'Current Intent', fill: 2 }
 	],
 	skillList: [
 		{

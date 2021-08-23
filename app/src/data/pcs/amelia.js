@@ -11,7 +11,8 @@ const character = {
 		{ aspect: 'Casting', value: 'Isla Fisher' },
 		{ aspect: 'Childhood', value: 'Dim memories of a tragedy that took her mother and sister' },
 		{ aspect: 'Heritage', value: 'Isn\'t aware of her connection to the island' },
-		{ aspect: 'Antagonist', value: '—'}
+		{ aspect: 'Antagonist' },
+		{ aspect: 'Current Intent', fill: 2 }
 	],
 	skillList: [
 		{

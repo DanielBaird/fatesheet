@@ -12,9 +12,11 @@ import { FatePointTrack } from './FatePointTrack'
 
 export const FullCharsheet = ({character}) => {
 
-	const aspects = character.aspectList.map( (a) =>
-		<NamedField key={a.aspect} name={a.aspect}>{a.value}</NamedField>
-	)
+	const aspects = character.aspectList.map( (a) => {
+		let fill = a.fill
+		if (!a.value && !a.fill) { fill = 1 }
+		return <NamedField key={a.aspect} name={a.aspect} fill={fill}>{a.value}</NamedField>
+	})
 
 	const stunts = character.stuntList.map( (s, i) =>
 		<NamedField key={i} name={s.name}>{s.description}</NamedField>

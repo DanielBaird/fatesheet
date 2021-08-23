@@ -2,12 +2,14 @@
 import React from 'react'
 import styled, {css} from 'styled-components'
 import {Col} from '../elements/Col'
+import {FillLine} from '../elements/FillLine'
 
 export const NamedField = (props) => {
 	return <Col narrow={props.narrow} bottomPad rightMargin>
 		<FieldHead>{props.name}</FieldHead>
 		<FieldText>
 			{props.children}
+			{props.fill && [...Array(props.fill).keys()].map((v,i) => <FillLine />) }
 		</FieldText>
 	</Col>
 }

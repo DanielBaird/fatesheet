@@ -11,7 +11,8 @@ const character = {
 		{ aspect: 'Casting', value: 'Alexis Bledel' },
 		{ aspect: 'Childhood', value: 'Blood bent' },
 		{ aspect: 'Heritage', value: 'Black rat of the Foster family' },
-		{ aspect: 'Antagonist', value: 'The Foster family golden child, my sister Jessica'}
+		{ aspect: 'Antagonist', value: 'The Foster family golden child, my sister Jessica'},
+		{ aspect: 'Current Intent', fill: 2 }
 	],
 	skillList: [
 		{

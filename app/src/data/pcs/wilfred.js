@@ -11,7 +11,8 @@ const character = {
 		{ aspect: 'Casting', value: 'Pale, rake-thin man in his late thirties, stress turning his once black hair prematurely grey' },
 		{ aspect: 'Childhood', value: 'Estranged from the Bishop family' },
 		{ aspect: 'Heritage', value: 'My family "experience" the Salem trials as part of our initiation' },
-		{ aspect: 'Antagonist', value: 'Ambitious local reporter Richard Trickton'}
+		{ aspect: 'Antagonist', value: 'Ambitious local reporter Richard Trickton'},
+		{ aspect: 'Current Intent', fill: 2 }
 	],
 	skillList: [
 		{
