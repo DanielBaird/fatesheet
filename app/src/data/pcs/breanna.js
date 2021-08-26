@@ -4,7 +4,7 @@ const character = {
 	name: 'Breanna Foster',
 	description: '',
 	pronouns: 'she/her',
-	portrait: '/charpics/alexis6.png',
+	portrait: './charpics/alexis6.png',
 	fatePoints: { refresh: 3, spaces: 5 },
 	aspectList: [
 		{ aspect: 'Canon', value: 'Healing heart' },
