@@ -1,6 +1,6 @@
 {
   "name": "fatesheet",
-  "homepage": "/",
+  "homepage": "https://danielbaird.com/fatesheet",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
