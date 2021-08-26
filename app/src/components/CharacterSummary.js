@@ -1,18 +1,19 @@
 import React from 'react'
 import { Box } from '../elements/Box'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const CharacterSummary = ({character}) => {
 	let skillList = character.skillList.reduce( (list, c)=>{
 		c.skills.forEach( (s)=> {
 			const adjust = c.adjustment || '+0'
-			list.push(<span style={{whiteSpace: 'nowrap'}}>{s + ' ' + adjust}</span>)
-			list.push(<SubtleText> / </SubtleText>)
+			list.push(<span key={'span'+s} style={{whiteSpace: 'nowrap'}}>{s + ' ' + adjust}</span>)
+			list.push(<SubtleText key={'slash'+s}> / </SubtleText>)
 		})
 		return list
 	}, [])
 	skillList.pop()
-	return <Box heading={character.name}>
+	console.log(character)
+	return <CharSummaryBox heading={character.name} portrait={character.portrait}>
 		<Desc>{character.description}</Desc>
 		<Aspect>
 			<AspectName>Assets</AspectName>
@@ -24,8 +25,22 @@ export const CharacterSummary = ({character}) => {
 				{a.value}
 			</Aspect>
 		)}
-	</Box>
+	</CharSummaryBox>
 }
+// --------------------------------------------------------
+const CharSummaryBox = styled(Box)`
+	${props => props.portrait && css`
+		background-image: url("${props => props.portrait}");
+		min-height: 260px;
+		background-size: auto 240px;
+		background-repeat: no-repeat;
+		background-position: bottom right;
+		& > p {
+			padding-right: 100px;
+			text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #fff;
+		}
+	`}
+`
 // --------------------------------------------------------
 const Desc = styled.p`
 	padding-bottom: 0.5em;
@@ -44,8 +59,7 @@ const AspectName = styled.span`
 	font-style: italic;
 	margin-right: 0.33em;
 	&:after {
-		content: ':'
-
+		content: ':';
 	}
 `
 // --------------------------------------------------------

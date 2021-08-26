@@ -4,6 +4,7 @@ const character = {
 	name: 'Evelyn Osmus',
 	description: 'Proud scion of the Osmus family, has earned her degree and now working in the family business',
 	pronouns: 'she/her',
+	portrait: '/charpics/kate7.png',
 	fatePoints: { refresh: 3, spaces: 5 },
 	aspectList: [
 		{ aspect: 'Canon', value: 'Family above all' },

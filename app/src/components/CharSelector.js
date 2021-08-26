@@ -23,7 +23,7 @@ export const CharSelector = ({characters, npcs, places}) => {
 	)
 
 	return <>
-		<Row wrap center noPrint doubleBottomMargin>
+		<Row center noPrint doubleBottomMargin>
 			{selectionList}
 			<CharCard
 				icon="❖"

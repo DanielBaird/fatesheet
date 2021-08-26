@@ -6,6 +6,8 @@ import {Col} from './Col'
 // --------------------------------------------------------
 export const Box = (props) => {
 
+	console.log(props)
+
 	let headingBits = props.heading
 		?.split(' and ')
 		.flatMap( (hb, i) => [hb, <Small key={i}> and </Small>])
@@ -15,7 +17,7 @@ export const Box = (props) => {
 		headingBits = <BigHead>{props.bigTitle}</BigHead>
 	}
 
-	return <Col pad border margin doubleRightMargin>
+	return <Col pad border margin doubleRightMargin className={props.className}>
 		<BoxHead>{headingBits}</BoxHead>
 		{ props.children }
 	</Col>
