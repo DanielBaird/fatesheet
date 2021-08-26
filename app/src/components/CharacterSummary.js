@@ -30,14 +30,14 @@ export const CharacterSummary = ({character}) => {
 // --------------------------------------------------------
 const CharSummaryBox = styled(Box)`
 	${props => props.portrait && css`
-		background-image: url("${props => props.portrait}");
+		background-image: url("${process.env.PUBLIC_URL}/${props => props.portrait}");
 		min-height: 260px;
 		background-size: auto 240px;
 		background-repeat: no-repeat;
 		background-position: bottom right;
 		& > p {
 			padding-right: 100px;
-			text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #fff;
+			text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #fff;
 		}
 	`}
 `

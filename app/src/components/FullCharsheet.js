@@ -8,6 +8,7 @@ import {SkillsTable} from './SkillsTable'
 import { StressTrack } from './StressTrack'
 import { ConsequencesTable } from './ConsequencesTable'
 import { FatePointTrack } from './FatePointTrack'
+import styled, { css } from 'styled-components'
 
 export const FullCharsheet = ({character}) => {
 
@@ -21,7 +22,7 @@ export const FullCharsheet = ({character}) => {
 		<NamedField key={i} name={s.name}>{s.description}</NamedField>
 	)
 
-	return <Col>
+	return <CharBox portrait={character.portrait}>
 		{ character.fatePoints && <FatePointTrack points={character.fatePoints} /> }
 		<Row>
 			<Box bigTitle={character.name}>
@@ -52,5 +53,21 @@ export const FullCharsheet = ({character}) => {
 				</Box>
 			</Col>
 		</Row>
-	</Col>
+	</CharBox>
 }
+// --------------------------------------------------------
+const CharBox = styled(Col)`
+	${props => props.portrait && css`
+		&:after {
+			position: absolute;
+			top: 5%; bottom: 0;
+			left: 0; right: 0;
+			content: '';
+			opacity: 0.3;
+			background-image: url("${process.env.PUBLIC_URL}/${props => props.portrait}");
+			background-size: contain;
+			background-position: bottom right;
+			background-repeat: no-repeat;
+		}
+	`}
+`
