@@ -6,8 +6,6 @@ import {Col} from './Col'
 // --------------------------------------------------------
 export const Box = (props) => {
 
-	console.log(props)
-
 	let headingBits = props.heading
 		?.split(' and ')
 		.flatMap( (hb, i) => [hb, <Small key={i}> and </Small>])
@@ -37,10 +35,20 @@ const BoxHead = styled.div`
 	letter-spacing: 0.05em;
 	color: #fff;
 	background-color: ${props => props.theme.edgeColor};
-	padding: 0 ${props => props.theme.gap};
-	height: ${props => props.theme.headHeight};
+
+	// padding: 0 ${props => props.theme.gap};
+	// min-height: ${props => props.theme.headHeight};
 	/* tweak the 1.0 to center all-caps text in the header bar */
-	line-height: calc(1.0 * ${props => props.theme.headHeight});
+	// line-height: calc(1.0 * ${props => props.theme.headHeight});
+
+	padding:
+		calc((${props => props.theme.headHeight} - 1em) / 2)
+		${props => props.theme.gap};
+	min-height: ${props => props.theme.headHeight};
+	/* tweak the 1.0 to center all-caps text in the header bar */
+	line-height: 1.1;
+
+
 	border-bottom-right-radius: calc(1 * ${props => props.theme.gap});
 
 	margin:

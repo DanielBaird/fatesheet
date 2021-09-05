@@ -44,9 +44,9 @@ export const CharSelector = ({characters, npcs, places}) => {
 				onSelect={ ()=> setCurrent(PLACES) }
 			/>
 		</Row>
-		{ current === NPCS && <AllCharacterSummary characters={npcs} /> }
-		{ current === PLAYERS && <AllCharacterSummary characters={characters} /> }
-		{ current === PLACES && <AllCharacterSummary characters={places} /> }
+		{ current === NPCS && <AllCharacterSummary characters={npcs} sidebar /> }
+		{ current === PLAYERS && <AllCharacterSummary characters={characters} zeroAssets sidebar /> }
+		{ current === PLACES && <AllCharacterSummary characters={places} columns="2" /> }
 		{ current >= 0 && <FullCharsheet character={characters[current]} /> }
 	</>
 }
