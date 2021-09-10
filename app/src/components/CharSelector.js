@@ -8,7 +8,7 @@ const PLAYERS = -1
 const NPCS = -2
 const PLACES = -3
 // --------------------------------------------------------
-export const CharSelector = ({characters, npcs, places}) => {
+export const CharSelector = ({characters, npcs, places, references}) => {
 
 	const [current, setCurrent] = useState(PLAYERS)
 
@@ -47,7 +47,7 @@ export const CharSelector = ({characters, npcs, places}) => {
 		{ current === NPCS && <AllCharacterSummary characters={npcs} sidebar /> }
 		{ current === PLAYERS && <AllCharacterSummary characters={characters} zeroAssets sidebar /> }
 		{ current === PLACES && <AllCharacterSummary characters={places} columns="2" /> }
-		{ current >= 0 && <FullCharsheet character={characters[current]} /> }
+		{ current >= 0 && <FullCharsheet character={characters[current]} references={references} /> }
 	</>
 }
 // --------------------------------------------------------

@@ -5,7 +5,7 @@ import {Col} from '../elements/Col'
 import {FillLine} from '../elements/FillLine'
 
 export const NamedField = (props) => {
-	return <Col narrow={props.narrow} bottomPad rightMargin>
+	return <Col narrow={props.narrow} bottomPad rightMargin className={props.className}>
 		<FieldHead>{props.name}</FieldHead>
 		<FieldText>
 			{props.children}

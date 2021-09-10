@@ -8,6 +8,8 @@ import { PageWrapper } from './components/PageWrapper'
 
 import { allCharacters, allNpcs, allPlaces } from './data/allChars'
 
+import references from './data/references'
+
 function App() {
 	return (
 		<ThemeProvider theme={fateSheetTheme}>
@@ -16,6 +18,7 @@ function App() {
 					characters={allCharacters}
 					npcs={allNpcs}
 					places={allPlaces}
+					references={references}
 				/>
 			</PageWrapper>
 		</ThemeProvider>

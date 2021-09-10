@@ -8,9 +8,10 @@ import {SkillsTable} from './SkillsTable'
 import { StressTrack } from './StressTrack'
 import { ConsequencesTable } from './ConsequencesTable'
 import { FatePointTrack } from './FatePointTrack'
+import { References } from './References'
 import styled, { css } from 'styled-components'
 
-export const FullCharsheet = ({character}) => {
+export const FullCharsheet = ({character, references}) => {
 
 	const aspects = character.aspectList.map( (a) => {
 		let fill = a.fill
@@ -52,6 +53,14 @@ export const FullCharsheet = ({character}) => {
 					{stunts}
 				</Box>
 			</Col>
+		</Row>
+		<Row>
+			{/* <Box heading="Reference"> */}
+				<References
+					include={['magic']}
+					references={references}
+				/>
+			{/* </Box> */}
 		</Row>
 	</CharBox>
 }
