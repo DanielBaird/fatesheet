@@ -13,6 +13,9 @@ import bloodbowl from "./places/bloodbowl"
 import press from "./places/press"
 import bridge from "./places/bridge"
 import coach from "./npcs/coach";
+import oldlady1 from "./npcs/oldlady1";
+import oldlady2 from "./npcs/oldlady2";
+import handyman from "./npcs/handyman";
 
 export const allCharacters = [
 	amelia,
@@ -23,7 +26,10 @@ export const allCharacters = [
 
 export const allNpcs = [
 	reporter,
-	coach
+	coach,
+	oldlady1,
+	oldlady2,
+	handyman
 ]
 
 export const allPlaces = [
