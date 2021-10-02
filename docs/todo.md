@@ -10,9 +10,12 @@ todo
 - DONE optional consequence box
 - DONE character portraits on player-characters summary page
 - DONE character portraits on player-characters details page
+- DONE tighter font when printing
+- DONE multicolumn
+- DONE sidebar for assets
+- DOME summary of places
+- DONE summary of magics
 
-- summary of magics
-- summary of places
 - check Amelia's magic flavour, should it be breath(knowledge) or skin(illusion)?
 - space for Notes, Motivations, Goals, etc
 	- add Breanna's goal: awaken Amy and show her her magic
