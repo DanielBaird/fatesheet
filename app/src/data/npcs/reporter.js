@@ -2,7 +2,7 @@ const character = {
 	name: 'Richard "Tricky Dicky" Trickton',
 	description: 'Ambitious investigative reporter who recently took over at the Moon Island Mirror, eager to make a name for himself',
 	pronouns: 'he/him',
-	portrait: './charpics/richard-trickton.jpeg',
+	portrait: './charpics/richard-trickton-nobg.png',
 	aspectList: [
 		{ aspect: 'Antagonist', value: 'mayor Wilfred Bishop'},
 		{ aspect: 'Canon', value: 'The public deserves to know the truth; no matter what that is' },
